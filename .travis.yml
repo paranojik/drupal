@@ -41,9 +41,6 @@ before_script:
   - phpenv rehash
   - mysql -e 'create database drupal;'
     # Install drupal default profile
-  - ls
-  - pwd
-  - cd drupal
   - drush --verbose site-install --db-url=mysql://root:@127.0.0.1/drupal --yes
   - drush en simpletest -y
 

@@ -47,5 +47,5 @@ before_script:
 
 
 script:
-  - php core/scripts/run-tests.sh --color --verbose --concurency 4 --all
+  - php core/scripts/run-tests.sh --color --verbose --concurrency 4 --all
 

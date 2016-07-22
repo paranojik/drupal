@@ -52,3 +52,4 @@ before_script:
 
 script:
   - php core/scripts/run-tests.sh --color --verbose --concurency 4 --all
+  

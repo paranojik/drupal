@@ -37,7 +37,8 @@ before_install:
 
 before_script:
   # Install Drush
-  - composer global require drush/drush:dev-master
+  - composer global update
+  - composer global require drush/drush
   - phpenv rehash
   - mysql -e 'create database drupal;'
     # Install drupal default profile

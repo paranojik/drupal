@@ -47,5 +47,5 @@ before_script:
   - which php
 
 script:
-  - sudo -u www-data php core/scripts/run-tests.sh --color --verbose --concurrency 4 --all
+  - php core/scripts/run-tests.sh --color --verbose --concurrency 4 --all
 

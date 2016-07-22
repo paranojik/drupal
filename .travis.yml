@@ -40,6 +40,7 @@ before_script:
   - composer global require drush/drush
   - phpenv rehash
   - mysql -e 'create database drupal;'
+  - composer install
     # Install drupal default profile
   - drush --verbose site-install --db-url=mysql://root:@127.0.0.1/drupal --yes
   - drush en simpletest -y

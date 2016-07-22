@@ -37,12 +37,11 @@ before_install:
 
 before_script:
   # Install Drush
-  - composer global update
   - composer global require drush/drush
   - phpenv rehash
   - mysql -e 'create database drupal;'
     # Install drupal default profile
-  - cd drupal
+  - cd paranojik/drupal
   - drush --verbose site-install --db-url=mysql://root:@127.0.0.1/drupal --yes
   - drush en simpletest -y
 

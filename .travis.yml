@@ -25,10 +25,6 @@ mysql:
 matrix:
   fast_finish: true
 
-branches:
-  only:
-    - "8.x-2.x"
-
 env:
   global:
     # add composer's global bin directory to the path
@@ -52,4 +48,4 @@ before_script:
 
 script:
   - php core/scripts/run-tests.sh --color --verbose --concurency 4 --all
-  
+

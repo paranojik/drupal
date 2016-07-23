@@ -7,7 +7,7 @@
 #   https://github.com/sonnym/travis-ci-drupal-module-example
 
 language: php
-sudo: true
+sudo: false
 
 cache:
   directories:
@@ -15,7 +15,7 @@ cache:
 
 php:
   - 5.6
-  - 7
+  #- 7
 
 mysql:
   database: drupal
@@ -23,7 +23,7 @@ mysql:
   encoding: utf8
 
 matrix:
-  fast_finish: true
+  #fast_finish: true
 
 env:
   global:
@@ -36,9 +36,10 @@ before_install:
   # Codesniffer and Coder
 
 before_script:
+  - phpenv config-rm xdebug.ini
+  - phpenv rehash
   # Install Drush
   - composer global require drush/drush
-  - phpenv rehash
   - mysql -e 'create database drupal;'
   - composer install
     # Install drupal default profile

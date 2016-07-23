@@ -47,5 +47,5 @@ before_script:
   - drush en simpletest -y
 
 script:
-  - php core/scripts/run-tests.sh --color --verbose --concurrency 4 --all --php /home/travis/.phpenv/shims/php
+  - php core/scripts/run-tests.sh --color --verbose --concurrency 4 --all --php /home/travis/.phpenv/shims/php  --url http://127.0.0.1:8080
 
